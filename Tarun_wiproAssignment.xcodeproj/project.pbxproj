@@ -15,6 +15,12 @@
 		6425D8ED23E01D9600386108 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6425D8EB23E01D9600386108 /* LaunchScreen.storyboard */; };
 		6425D8F823E01D9600386108 /* Tarun_wiproAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6425D8F723E01D9600386108 /* Tarun_wiproAssignmentTests.swift */; };
 		6425D90323E01D9600386108 /* Tarun_wiproAssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6425D90223E01D9600386108 /* Tarun_wiproAssignmentUITests.swift */; };
+		6425D91523E0208E00386108 /* tableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6425D91423E0208E00386108 /* tableCell.swift */; };
+		6425D91723E0226300386108 /* networkCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6425D91623E0226300386108 /* networkCall.swift */; };
+		6425D91923E0239A00386108 /* viewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6425D91823E0239A00386108 /* viewModel.swift */; };
+		6425D91E23E02BFD00386108 /* Rows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6425D91C23E02BFD00386108 /* Rows.swift */; };
+		6425D91F23E02BFD00386108 /* dataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6425D91D23E02BFD00386108 /* dataModel.swift */; };
+		6425D92123E032EE00386108 /* JsonFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6425D92023E032EE00386108 /* JsonFile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		6425D8FE23E01D9600386108 /* Tarun_wiproAssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tarun_wiproAssignmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6425D90223E01D9600386108 /* Tarun_wiproAssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tarun_wiproAssignmentUITests.swift; sourceTree = "<group>"; };
 		6425D90423E01D9600386108 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6425D91423E0208E00386108 /* tableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableCell.swift; sourceTree = "<group>"; };
+		6425D91623E0226300386108 /* networkCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = networkCall.swift; sourceTree = "<group>"; };
+		6425D91823E0239A00386108 /* viewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewModel.swift; sourceTree = "<group>"; };
+		6425D91C23E02BFD00386108 /* Rows.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rows.swift; sourceTree = "<group>"; };
+		6425D91D23E02BFD00386108 /* dataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dataModel.swift; sourceTree = "<group>"; };
+		6425D92023E032EE00386108 /* JsonFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonFile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +111,10 @@
 		6425D8DF23E01D9100386108 /* Tarun_wiproAssignment */ = {
 			isa = PBXGroup;
 			children = (
-				6425D8E023E01D9100386108 /* AppDelegate.swift */,
-				6425D8E223E01D9100386108 /* SceneDelegate.swift */,
-				6425D8E423E01D9100386108 /* ViewController.swift */,
+				6425D91323E0204700386108 /* HelpingFiles */,
+				6425D91223E0203700386108 /* View */,
+				6425D91123E0202E00386108 /* viewModel */,
+				6425D91023E0202500386108 /* Model */,
 				6425D8E623E01D9100386108 /* Main.storyboard */,
 				6425D8E923E01D9600386108 /* Assets.xcassets */,
 				6425D8EB23E01D9600386108 /* LaunchScreen.storyboard */,
@@ -126,6 +139,43 @@
 				6425D90423E01D9600386108 /* Info.plist */,
 			);
 			path = Tarun_wiproAssignmentUITests;
+			sourceTree = "<group>";
+		};
+		6425D91023E0202500386108 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6425D91D23E02BFD00386108 /* dataModel.swift */,
+				6425D91C23E02BFD00386108 /* Rows.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6425D91123E0202E00386108 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6425D91823E0239A00386108 /* viewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		6425D91223E0203700386108 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6425D8E423E01D9100386108 /* ViewController.swift */,
+				6425D91423E0208E00386108 /* tableCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6425D91323E0204700386108 /* HelpingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				6425D8E223E01D9100386108 /* SceneDelegate.swift */,
+				6425D8E023E01D9100386108 /* AppDelegate.swift */,
+				6425D91623E0226300386108 /* networkCall.swift */,
+				6425D92023E032EE00386108 /* JsonFile.swift */,
+			);
+			path = HelpingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +309,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6425D91E23E02BFD00386108 /* Rows.swift in Sources */,
 				6425D8E523E01D9100386108 /* ViewController.swift in Sources */,
+				6425D91F23E02BFD00386108 /* dataModel.swift in Sources */,
+				6425D92123E032EE00386108 /* JsonFile.swift in Sources */,
 				6425D8E123E01D9100386108 /* AppDelegate.swift in Sources */,
+				6425D91523E0208E00386108 /* tableCell.swift in Sources */,
 				6425D8E323E01D9100386108 /* SceneDelegate.swift in Sources */,
+				6425D91923E0239A00386108 /* viewModel.swift in Sources */,
+				6425D91723E0226300386108 /* networkCall.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +492,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Tarun_wiproAssignment/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -453,6 +510,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Tarun_wiproAssignment/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

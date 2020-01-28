@@ -10,6 +10,14 @@ import XCTest
 @testable import Tarun_wiproAssignment
 
 class Tarun_wiproAssignmentTests: XCTestCase {
+   
+    func testDecoding() throws {
+        /// When the Data initializer is throwing an error, the test will fail.
+        let jsonData =  try? JSONSerialization.data(withJSONObject:jsonObj)
+
+        /// The `XCTAssertNoThrow` can be used to get extra context about the throw
+        XCTAssertNoThrow(try JSONDecoder().decode(dataModel.self, from: jsonData!))
+    }
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
