@@ -11,21 +11,20 @@ class viewModel:NSObject {
     let networkCallObj = networkCall()
     var dataArray : dataModel?
     func networkCalling(completion: @escaping (_ responseData: Bool) -> Void){
-
         networkCallObj.getDownloadData(url: "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json") { (dataResponse, error) in
-            print(dataResponse)
-                        do {
-                            let jsonDecoder = JSONDecoder()
-                            self.dataArray = try jsonDecoder.decode(dataModel.self, from: dataResponse)
-        }
-        catch let error as NSError {
-                                           print(error.localizedDescription)
+            do {
+                let jsonDecoder = JSONDecoder()
+                self.dataArray = try jsonDecoder.decode(dataModel.self, from: dataResponse)
+                completion(true)
+            }
+            catch let error as NSError {
+                print(error.localizedDescription)
+                
+            }
             
-                                       }
             
-            completion(true)
         }
-    
+        
     }
    
 }

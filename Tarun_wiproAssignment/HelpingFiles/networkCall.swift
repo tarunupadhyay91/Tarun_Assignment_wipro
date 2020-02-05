@@ -9,8 +9,6 @@
 import Foundation
 public class networkCall: NSObject {
     func getDownloadData(url:String,completion: @escaping (_ responseData: Data, _ error: NSError?) -> Void) {
-        
-        let url = "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json"
            URLSession.shared.dataTask(with: URL(string: url)!) { (data, res, err) in
 
                if let d = data {
