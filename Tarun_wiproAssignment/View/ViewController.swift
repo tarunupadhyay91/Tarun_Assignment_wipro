@@ -42,7 +42,7 @@ class ViewController: UIViewController,UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-       
+        
         self.fatchData()
         if #available(iOS 10.0, *) {
             tableView.refreshControl = refreshControl
@@ -56,10 +56,9 @@ class ViewController: UIViewController,UITableViewDataSource {
     }
 
  @objc private func refreshTableData(_ sender: Any) {
-     // Fetch Weather Data
+    
      fatchData()
     self.refreshControl.endRefreshing()
-    //self.activityIndicatorView.stopAnimating()
  }
     
     func fatchData(){
